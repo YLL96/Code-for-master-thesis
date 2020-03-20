@@ -1,11 +1,11 @@
 # Code-for-master-thesis
-#This code uses package:
+This code uses package:
 
-#PowerModels.jl
+PowerModels.jl
 
-#CPLEX.jl
+CPLEX.jl
 
-#Distributions.jl
+Distributions.jl
 
-#JuMP.jl
+JuMP.jl
 
