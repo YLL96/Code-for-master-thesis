@@ -73,6 +73,25 @@ for l in 1:numlines
 end
 refbus=1
 
+#node that send or take power flow from/to node i
+take=Vector{Int}[]
+give=Vector{Int}[]
+
+for i in 1:numbuses
+    temp_take=[]
+    temp_give=[]
+    for l in 1:numlines
+        if i==head[l]
+            push!(temp_take,tail[l])
+        end
+        if i==tail[l]
+            push!(temp_give,head[l])
+        end
+    end
+    push!(take, temp_take)
+    push!(give, temp_give)
+end
+
 #Demand at each bus
 Pd=zeros(numbuses)
 for n in 1:numloads
